@@ -1,0 +1,33 @@
+.action-btns {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.btn-success.btn-sm,
+.btn-danger.btn-sm {
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2px 12px;
+}
+.table thead th {
+  background: #e3f2fd;
+  text-align: center;
+  vertical-align: middle;
+}
+.table td,
+.table th {
+  vertical-align: middle !important;
+}
+.form-select-sm {
+  min-width: 120px;
+}
+.row-phongvan > td {
+  background-color: #fff2b0 !important;
+}
+.row-nhan > td {
+  background-color: #b9f8cb !important;
+}
+.row-tuchoi > td {
+  background-color: #efb4b4 !important;
+}

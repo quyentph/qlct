@@ -1,0 +1,142 @@
+body {
+  margin: 0px;
+  font-family: "Segoe UI", "Times New Roman", Times, serif;
+  font-size: 14px;
+  background: #d3e0ed;
+}
+
+.container_menu {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #7dc4fa 0%, #30a6f5 100%);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px 16px 16px 16px;
+  gap: 16px;
+}
+
+.container_item {
+  position: relative;
+  min-width: 140px;
+  height: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  border-left: none;
+  transition: background 0.5s;
+  border-radius: 8px 8px 0 0;
+}
+
+.container_item a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 0;
+  display: block;
+  transition: color 0.2s;
+}
+
+.container_item:hover .item,
+.container_item:focus-within .item {
+  color: #fff;
+}
+
+.list_items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  width: max-content;
+  background: linear-gradient(90deg, #7dc4fa 0%, #30a6f5 100%);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.container_item:hover .list_items,
+.container_item:focus-within .list_items,
+.list_items:hover {
+  display: block;
+  background: linear-gradient(90deg, #7dc4fa 0%, #30a6f5 100%);
+  color: #fff;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  background: transparent;
+  color: #fff;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-left .list_items {
+  left: auto;
+  right: 0;
+}
+.list_items .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  transition: background 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: none;
+  height: 44px;
+  line-height: 1.4;
+}
+
+.list_items .item:hover:not(.lock),
+.list_items .item:focus-visible:not(.lock) {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffe082;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.13);
+  transform: translateX(4px) scale(1.03);
+  text-decoration: none;
+}
+
+.list_items .item.lock {
+  pointer-events: none;
+  color: #bbb !important;
+  background: #ededed !important;
+  opacity: 0.7;
+  position: relative;
+  padding-left: 38px !important;
+  box-shadow: none;
+}
+
+.list_items .item.lock::before {
+  content: "\1F512";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #bbb;
+  opacity: 0.9;
+  pointer-events: none;
+}

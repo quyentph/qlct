@@ -1,0 +1,117 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #38bdf8 0%, #0ea5e9 50%, #6366f1 100%);
+  background-attachment: fixed;
+}
+.container {
+  animation: fadeInDown 0.8s;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
+}
+.nav-tabs {
+  border-bottom: 2px solid #38bdf8;
+}
+.nav-link {
+  color: black !important;
+  background: linear-gradient(
+    120deg,
+    rgb(0, 87, 124) 0%,
+    rgb(56, 151, 234) 50%,
+    rgb(0, 87, 124) 100%
+  ) !important;
+  font-weight: 500;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link.active,
+.nav-link:focus {
+  background: linear-gradient(90deg, #38bdf8 60%, #6366f1 100%);
+  color: #fff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #38bdf84d;
+}
+.btn-outline-primary,
+.btn-outline-info {
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-danger {
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px #ef44441a;
+}
+.btn-outline-primary:hover,
+.btn-outline-info:hover,
+.btn-danger:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px #6366f133;
+}
+.tab-content {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 2px 8px #6366f11a;
+  padding: 18px 12px 12px 12px;
+  min-height: 380px;
+}
+.list-unstyled li {
+  margin-bottom: 6px;
+}
+@media (max-width: 767px) {
+  .row.mb-4 {
+    flex-direction: column;
+  }
+  .col-md-4,
+  .col-md-8 {
+    max-width: 100%;
+  }
+}
+/* Giao diện cho từng thông báo */
+.notification-item {
+  padding: 12px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #bcdeff;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+.notification-item:hover {
+  background-color: #95ffb5;
+}
+
+.notification-item a {
+  text-decoration: none;
+  color: #0d6efd;
+  font-size: 1rem;
+  display: block;
+}
+
+.notification-item a.fw-bold.text-danger {
+  font-weight: 600;
+  color: #dc3545; /* màu đỏ cho thông báo chưa đọc */
+}
+
+.notification-item .badge.bg-danger {
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
